@@ -1,0 +1,24 @@
+# Python / local environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# Secrets and local runtime data
+.env
+.env.*
+!.env.example
+credentials*
+auth.json
+*.key
+*.pem
+*.log
+*.sqlite*
+PTALunaBridge/
+# Local exports and editor data
+*.zip
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
