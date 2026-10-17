@@ -12,6 +12,8 @@ Python 依赖由 `requirements.txt` 声明，安装时从包索引获取。本�
 
 ## 图文资源
 
-`docs/assets` 内图文由本项目生成，用于说明产品布局；用量数字是演示值，不是用户账单、真实账户额度或服务商背书。配图不使用服务商商标。
+`docs/assets` 内配图由项目渲染脚本生成，用于说明产品布局；用量数字是演示值，不是用户账单、真实账户额度或服务商背书。
+
+界面参考 Claude 的简约视觉风格；桌宠采用 Clawd 风格的像素造型。宣传图直接读取 `pta-luna.user.js` 中的现有 SVG，避免宣传形象与实际界面不一致。这是对设计参考的说明，不将 Clawd 角色或 Claude/Anthropic 品牌认定为本项目原创，项目 MIT 许可证不授予这些品牌或角色的第三方权利。本项目不提供 Claude 模型接入，也没有 Anthropic 的官方关联或背书。
 
 配图脚本可使用 Noto Sans SC（SIL Open Font License）作为外部渲染字体。字体文件不随仓库分发；字体来源：https://github.com/google/fonts/tree/main/ofl/notosanssc 。

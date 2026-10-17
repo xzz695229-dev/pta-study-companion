@@ -2,10 +2,14 @@
 
 [返回首页](../README.md)
 
+**实际配置中遇到过：Node.js 环境未安装、Codex CLI 未安装。** 两者都不会随项目 ZIP 自动安装。先按 [从零配置教程](CODEX_SETUP.md) 检查环境，再排查登录和额度查询。
+
 | 现象 | 优先检查 |
 | --- | --- |
 | 双击启动器后缺文件 | 完整解压 ZIP；`bridge.py`、`manager.html`、`requirements.txt` 和启动器需要在同一目录 |
 | 缺 Python / pip 安装失败 | 安装 Python 3.10+ 并加入 PATH；查看控制台具体错误，确认可连接包索引 |
+| `node` / `npm` 不是可识别命令 | 本教程的 npm 安装路线需先安装 Node.js LTS；从官方安装包安装 Node.js 与 npm，再重开 PowerShell。`node --version`、`npm.cmd --version` 都应输出版本号 |
+| Node.js 可用，`codex` 仍找不到 | Node.js 不包含 Codex CLI。运行 `npm.cmd install -g @openai/codex@latest`，成功后检查 `codex.cmd --version` 和 `where.exe codex`；若已安装则检查 npm 全局目录与 PATH |
 | 端口 1455 被占用 | 关闭旧辅助程序；如 CLI 登录占用同一端口，先关辅助程序再登录 CLI。也可通过启动参数换空闲端口，并同步脚本地址 |
 | 脚本连不上本机 | 控制台是否还开着；地址/配对码是否匹配；脚本猫和浏览器是否允许访问本机网络 |
 | 模型列表只有 Luna | 在设置页向下找到「读取账号模型并检查连接」并点击，查看返回的模型数量或错误。CLI 安装不会自动刷新目录 |
